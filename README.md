@@ -1,4 +1,4 @@
-🎧 Music Listening Digital Twin
+🎧 Music Digital Twin
 
 📌 Overview
 
