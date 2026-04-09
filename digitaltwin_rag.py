@@ -1,6 +1,26 @@
 import json, random
 from pathlib import Path
 
+def format_response(answer):
+    text = str(answer)
+    lower = text.lower()
+
+    if " by " in lower:
+        return f"🎵 {text}"
+    if "artist" in lower:
+        return f"😎 {text}"
+    return f"🤖 {text}"
+
+
+def format_list_response(items, icon):
+    if not items:
+        return f"{icon} No results found."
+
+    lines = [f"{icon} Found {len(items)} result(s):"]
+    for i, item in enumerate(items, 1):
+        lines.append(f"{i}. {item}")
+    return "\n".join(lines)
+
 def load_data():
     data_path = Path(__file__).with_name("digitaltwin.json")
     with data_path.open() as f:
@@ -58,7 +78,27 @@ def query_system(question):
     else:
         return "Try asking about moods, top artist, percentages, or recommendations."
 
-if __name__=="__main__":
+if __name__ == "__main__":
+    print("🤖 Music Digital Twin Assistant")
+    print("Type 'exit' anytime to quit.")
     while True:
-        q = input("Ask: ")
-        print(query_system(q))
+        q = input("🤖 Ask: ").strip()
+        if q.lower() in {"exit", "quit"}:
+            print("🤖 Goodbye!")
+            break
+        answer = query_system(q)
+
+        if isinstance(answer, list):
+            if "artist" in q.lower():
+                print(format_list_response(sorted(answer), "😎"))
+            else:
+                print(format_list_response(answer, "🎵"))
+            continue
+
+        # Add artist/music icon when those topics appear; otherwise use AI icon.
+        if "artist" in q.lower() or (isinstance(answer, str) and "artist" in answer.lower()):
+            print(f"😎 {answer}")
+        elif "song" in q.lower() or "music" in q.lower() or "recommend" in q.lower():
+            print(f"🎵 {answer}")
+        else:
+            print(format_response(answer))
