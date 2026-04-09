@@ -1,7 +1,9 @@
 import json, random
+from pathlib import Path
 
 def load_data():
-    with open("digitaltwin.json") as f:
+    data_path = Path(__file__).with_name("digitaltwin.json")
+    with data_path.open() as f:
         return json.load(f)
 
 def analyze(data):
@@ -40,7 +42,8 @@ def query_system(question):
         return result
 
     elif "recommend" in q:
-        return f"{random.choice(history)['song']} by {random.choice(history)['artist']}"
+        pick = random.choice(history)
+        return f"{pick['song']} by {pick['artist']}"
 
     elif "most listened artist" in q:
         return max(artist_count, key=artist_count.get)
