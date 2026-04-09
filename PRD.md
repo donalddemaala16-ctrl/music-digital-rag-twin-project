@@ -1,3 +1,19 @@
+---
+doc_id: prd-music-digital-twin
+doc_type: prd
+project: music-digital-rag-twin
+version: 1.0.0
+status: draft
+last_updated: 2026-04-09
+owner: TBD
+tags:
+	- prd
+	- requirements
+	- rag
+	- digital-twin
+	- music
+---
+
 **Music Digital Rag Twin – Product Requirements Document (PRD)**
 
 **Product Overview**
@@ -50,7 +66,7 @@ Multi-user support or cloud backend.
 Mobile app development.
 Advanced graphical dashboards beyond basic stats in HTML/CSS.
 
-**Success Criteria**
+**4. Success Criteria**
 
 **Functionality:**
 
@@ -70,7 +86,7 @@ No errors for valid queries or UI interactions.
 Scalability (Optional Stretch Goal):
 Able to handle additional songs (>100) without breaking functionality.
 
-**Metrics & KPIs**
+**5. Metrics & KPIs**
 
 Number of successful AI responses per session.
 User engagement with frontend input box.
