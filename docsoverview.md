@@ -7,11 +7,11 @@ status: active
 last_updated: 2026-04-09
 owner: TBD
 tags:
-	- docs
-	- overview
-	- architecture
-	- rag
-	- music
+  - docs
+  - overview
+  - architecture
+  - rag
+  - music
 ---
 
 # Overview
