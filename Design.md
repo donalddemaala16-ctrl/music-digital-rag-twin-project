@@ -21,11 +21,11 @@ The system demonstrates the application of a **Digital Twin concept** to persona
 This design directly implements the requirements defined in the Product Requirements Document (PRD):
 
 ```
-- ✅ Personalized digital twin using `digitaltwin.json`  
-- ✅ Interactive query system via Python CLI (`digitaltwin_rag.py`)  
-- ✅ Analytics (top mood, artist, percentages)  
-- ✅ Optional frontend visualization (HTML/CSS/JS)  
-- ✅ Rule-based recommendation system
+- Personalized digital twin using `digitaltwin.json`  
+- Interactive query system via Python CLI (`digitaltwin_rag.py`)  
+- Analytics (top mood, artist, percentages)  
+- Optional frontend visualization (HTML/CSS/JS)  
+- Rule-based recommendation system
 ```
 
 All core goals, scope, and constraints from the PRD are reflected in this design.
