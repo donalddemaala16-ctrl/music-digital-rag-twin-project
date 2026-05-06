@@ -6,11 +6,11 @@ version: 1.0.0
 status: done
 last_updated: 2026-04-09
 tags:
-	- prd
-	- requirements
-	- rag
-	- digital-twin
-	- music
+  - prd
+  - requirements
+  - rag
+  - digital-twin
+  - music
 ---
 
 **Music Digital Rag Twin – Product Requirements Document (PRD)**
